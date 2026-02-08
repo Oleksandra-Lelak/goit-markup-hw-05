@@ -771,14 +771,17 @@ img {
   border: 1px solid rgba(46, 47, 66, 0.4);
   fill: none;
   stroke: none;
-  transition: backgraund-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .check-icon {
-  fill: #fcfcfc;
+  opacity: 0;
 }
 .terms-checkbox:checked + .terms-lable .custom-checkbox {
   background-color: #404bbf;
   fill: #f4f4fd;
+}
+.terms-checkbox:checked + .terms-lable .custom-checkbox .check-icon {
+  opacity: 1;
 }
 .form-button {
   display: block;
@@ -791,7 +794,7 @@ img {
   letter-spacing: 0.04em;
   color: #fff;
   padding: 16px 65px;
-  margin: 24px auto;
+  margin: 24px auto 0;
   height: 56px;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background-color: #4d5ae5;
