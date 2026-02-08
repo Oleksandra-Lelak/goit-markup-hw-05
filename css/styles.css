@@ -470,7 +470,7 @@ img {
 }
 .footer-text {
   width: 264px;
-  padding-top: 16px;
+  margin-top: 16px;
 }
 .footer-page-container {
   display: flex;
@@ -644,18 +644,23 @@ img {
   padding: 0;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #e7e9fc;
-  stroke-width: 1px solid rgba(0, 0, 0, 0.1);
-  stroke: rgba(0, 0, 0, 0.1);
   transition:
-    background-color,
-    stroke,
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.close-popup-icon:hover,
+.close-popup-icon:focus,
 .close-popup:hover,
 .close-popup:focus {
   stroke: #404bbf;
   background-color: #404bbf;
   fill: #fff;
+}
+.close-popup-icon {
+  fill: #2e2f42;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .addressing-user {
   font-family: "Roboto", sans-serif;
@@ -713,7 +718,7 @@ img {
 .comment-field {
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-  width: 360px;
+  width: 100%;
   height: 120px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
@@ -753,13 +758,7 @@ img {
 }
 .terms-checkbox {
 }
-.check-icon {
-  fill: #fcfcfc;
-}
-.terms-checkbox:checked + .terms-lable .custom-checkbox {
-  background-color: #404bbf;
-  fill: #f4f4fd;
-}
+
 .custom-checkbox {
   display: block;
   width: 16px;
@@ -773,6 +772,13 @@ img {
   fill: none;
   stroke: none;
   transition: backgraund-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.check-icon {
+  fill: #fcfcfc;
+}
+.terms-checkbox:checked + .terms-lable .custom-checkbox {
+  background-color: #404bbf;
+  fill: #f4f4fd;
 }
 .form-button {
   display: block;
